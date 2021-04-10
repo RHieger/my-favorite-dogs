@@ -20,5 +20,7 @@ with values for the three columns&mdash;**BREED**, **ORIGIN** and
 
 The fourth button resets the table to its original state.
 
+To build this mini-project, download the [starter code](https://github.com/RHieger/my-favorite-dogs/releases)
+
 For further information, please consult the associate article,
 **_A Quick Look at the JavaScript call() method_** on Medium.com

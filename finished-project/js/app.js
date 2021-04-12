@@ -16,6 +16,7 @@ const button2 = document.getElementById('breed2');
 const button3 = document.getElementById('breed3');
 const button4 = document.getElementById('reset');
 
+/*
 const breed1 = {
   breed: 'PUG',
   origin: 'CHINA',
@@ -33,6 +34,7 @@ const breed3 = {
   origin: 'ENGLAND',
   lifeSpan: '12-15 YEARS'
 };
+*/
 
 const getDogInfo = {
   info: function() {

@@ -66,25 +66,45 @@ const resetTable = () => {
 
 };
 
+const setRowContent = (
+  column1,
+  column2,
+  column3,
+  breed
+) => {
+  column1.textContent = breed[0];
+  column2.textContent = breed[1];
+  column3.textContent = breed[2];
+};
+
 // Button box event listeners populate
 // table with dog breed information.
 
 button1.addEventListener('click', () => {
-  breedOne.textContent = dog1[0];
-  breedOrigin1.textContent = dog1[1];
-  breedAvgLife1.textContent = dog1[2];
+  setRowContent(
+    breedOne,
+    breedOrigin1,
+    breedAvgLife1,
+    dog1
+  );
 });
 
 button2.addEventListener('click', () => {
-  breedTwo.textContent = dog2[0];
-  breedOrigin2.textContent = dog2[1];
-  breedAvgLife2.textContent = dog2[2];
+  setRowContent(
+    breedTwo,
+    breedOrigin2,
+    breedAvgLife2,
+    dog2
+  );
 });
 
 button3.addEventListener('click', () => {
-  breedThree.textContent = dog3[0];
-  breedOrigin3.textContent = dog3[1];
-  breedAvgLife3.textContent = dog3[2];
+  setRowContent(
+    breedThree,
+    breedOrigin3,
+    breedAvgLife3,
+    dog3
+  );
 });
 
 button4.addEventListener('click', resetTable);

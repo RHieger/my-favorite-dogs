@@ -36,6 +36,40 @@ const breed3 = {
 };
 */
 
+class Dog {
+  constructor(breed, origin, lifeSpan) {
+    this.breed = breed;
+    this.origin = origin;
+    this.lifeSpan = lifeSpan;
+  }
+  getDoginfo() {
+    return [
+      this.breed,
+      this.origin,
+      this.lifeSpan
+    ];
+  }
+}
+
+const pug = new Dog(
+  'PUG',
+  'CHINA',
+  '12-15 YEARS'
+);
+
+const labrador = new Dog(
+  'LABRADOR',
+  'NEWFOUNDLAND',
+  '10-12 YEARS'
+);
+
+const beagle = new Dog(
+  'BEAGLE',
+  'ENGLAND',
+  '12-15 YEARS'
+);
+
+/*
 const getDogInfo = {
   info: function() {
     // Array containing properties of each dog object
@@ -45,10 +79,9 @@ const getDogInfo = {
       this.lifeSpan];
   }
 };
+*/
 
-const dog1 = getDogInfo.info.call(breed1);
-const dog2 = getDogInfo.info.call(breed2);
-const dog3 = getDogInfo.info.call(breed3);
+
 
 const resetTable = () => {
   

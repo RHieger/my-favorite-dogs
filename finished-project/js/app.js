@@ -16,33 +16,13 @@ const button2 = document.getElementById('breed2');
 const button3 = document.getElementById('breed3');
 const button4 = document.getElementById('reset');
 
-/*
-const breed1 = {
-  breed: 'PUG',
-  origin: 'CHINA',
-  lifeSpan: '12-15 YEARS'
-};
-
-const breed2 = {
-  breed: 'LABRADOR',
-  origin: 'NEWFOUNDLAND',
-  lifeSpan: '10-12 YEARS'
-};
-
-const breed3 = {
-  breed: 'BEAGLE',
-  origin: 'ENGLAND',
-  lifeSpan: '12-15 YEARS'
-};
-*/
-
 class Dog {
   constructor(breed, origin, lifeSpan) {
     this.breed = breed;
     this.origin = origin;
     this.lifeSpan = lifeSpan;
   }
-  getDoginfo() {
+  getDogInfo() {
     return [
       this.breed,
       this.origin,
@@ -69,19 +49,9 @@ const beagle = new Dog(
   '12-15 YEARS'
 );
 
-/*
-const getDogInfo = {
-  info: function() {
-    // Array containing properties of each dog object
-    return [
-      this.breed,
-      this.origin,
-      this.lifeSpan];
-  }
-};
-*/
-
-
+const dog1 = pug.getDogInfo();
+const dog2 = labrador.getDogInfo();
+const dog3 = beagle.getDogInfo();
 
 const resetTable = () => {
   

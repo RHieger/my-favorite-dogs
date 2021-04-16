@@ -3,6 +3,14 @@ const button1 = document.getElementById('addBreed');
 const button2 = document.getElementById('reset');
 const placeHolderRow = document.getElementById('noBreed');
 
+class dogBreed {
+  constructor(breed, origin, lifeSpan) {
+    this.breed = breed;
+    this.origin = origin;
+    this.lifeSpan = lifeSpan;
+  }
+}
+
 /*
 
 const breed1 = {

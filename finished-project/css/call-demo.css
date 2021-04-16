@@ -148,7 +148,7 @@ h1 {
 }
 
 .visible {
-  display: table-cell;
+  display: table-row;
 }
 
 .invisible {

@@ -1,6 +1,7 @@
 // Capture table cells and buttons
 const button1 = document.getElementById('addBreed');
 const button2 = document.getElementById('reset');
+const placeHolderRow = document.getElementById('noBreed');
 
 /*
 
@@ -35,21 +36,7 @@ const getDogInfo = {
 };
 
 const resetTable = () => {
-  
-  const noSelection = 'NO BREED SELECTED';
-
-  breedOne.textContent = noSelection;
-  breedOrigin1.textContent = null;
-  breedAvgLife1.textContent = null;
-
-  breedTwo.textContent = noSelection;
-  breedOrigin2.textContent = null;
-  breedAvgLife2.textContent = null;
-
-  breedThree.textContent = noSelection;
-  breedOrigin3.textContent = null;
-  breedAvgLife3.textContent = null;
-
+  placeHolderRow.classList.replace('invisible', 'visible');
 };
 
 const setRowContent = (
@@ -67,3 +54,5 @@ const setRowContent = (
 // table with dog breed information.
 
 // TBD—Event Listeners
+
+button2.addEventListener('click', resetTable);

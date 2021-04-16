@@ -43,6 +43,10 @@ const getDogInfo = {
   }
 };
 
+const removePlaceHolder = () => {
+  placeHolderRow.classList.replace('visible', 'invisible');
+};
+
 const resetTable = () => {
   placeHolderRow.classList.replace('invisible', 'visible');
 };

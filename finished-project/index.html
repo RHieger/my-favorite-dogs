@@ -13,6 +13,7 @@
   <header>
     <h1>my favorite dogs</h1>
   </header>
+
   <section id="dogBreeds">
 
     <table id="dogList">
@@ -30,7 +31,7 @@
       </tr>
       <tr id="noBreed" class="visible">
         <td class="placeholder" colspan="3">
-          NO BREED SELECTED
+          NO BREED ENTERED
         </td>
       </tr>
     </table>
@@ -41,6 +42,56 @@
     </div>
 
   </section>
+
+  <!-- MODAL DIALOGUE -->
+
+  <div class="modal">
+    <div class="modal-head">
+      <div class="close-button">
+        &times;
+      </div>
+      <h1>
+        Enter the Information for Your Favorite Breed
+      </h1>
+    </div>
+    <div class="modal-body">
+      
+      <label for="favBreed">
+        Breed:
+      </label>
+      <input type="text"
+       name="favBreed"
+       id="favBreed"
+       placeholder="Your Faorite Breed" />
+
+      <label for="origin">
+        Indigenous to:
+      </label>
+
+      <select name="origin" id="country">
+        <optgroup label="Country of Origin">
+          <option>Placeholder 1</option>
+        </optgroup>
+        <optgroup label="Continent of Origin">
+          <option>Placeholder 2</option>
+        </optgroup>
+        <optgroup label="Region of Origin">
+          <option>Placeholder 3</option>
+        </optgroup>
+      </select>
+      
+    </div>
+
+    <div class="modal-foot">
+      <button type="submit">
+        add your favorite breed
+      </button>
+      <button type="reset">
+        cancel
+      </button>
+    </div>
+  </div>
+
 </body>
 </html>
 

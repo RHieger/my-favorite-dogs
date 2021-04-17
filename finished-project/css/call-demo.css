@@ -147,6 +147,16 @@ h1 {
   background: rgba(170, 143, 119, 0.25);
 }
 
+/* Modal Dialogue Box */
+
+.modal {
+  margin: 50px auto 0 auto;
+  padding: 0px 35px 50px 35px;
+  width: 45%;
+  top: 100px;
+  left: 33%;
+}
+
 .visible {
   display: table-row;
 }

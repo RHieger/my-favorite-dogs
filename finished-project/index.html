@@ -14,11 +14,11 @@
     <h1>my favorite dogs</h1>
   </header>
 
-  <section id="dogBreeds">
+  <section id="dogBreeds invisible">
 
-    <table id="dogList">
-      <caption>Favorite Dog Breeds</caption>
-      <tr>
+    <table id="dogList invisible">
+      <caption class="invisible">Favorite Dog Breeds</caption>
+      <tr class="invisible">
         <th scope="col">
           breed
         </th>
@@ -29,16 +29,16 @@
           average lifespan
         </th>
       </tr>
-      <tr id="noBreed" class="visible">
+      <tr id="noBreed" class="invisible">
         <td class="placeholder" colspan="3">
           NO BREED ENTERED
         </td>
       </tr>
     </table>
 
-    <div id="buttonBox">
-      <button id="addBreed">Add a Favorite Breed</button>
-      <button id="reset">Reset</button>
+    <div id="buttonBox" style="display: none;">
+      <button id="addBreed" class="invisible">Add a Favorite Breed</button>
+      <button id="reset" class="invisible">Reset</button>
     </div>
 
   </section>

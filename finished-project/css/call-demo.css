@@ -13,6 +13,8 @@ body {
   margin: 0 auto;
 }
 
+/* Header Styling */
+
 header {
   margin: inherit;
   background-color: #aa8f77;  /* Patterned after pug fur */
@@ -20,7 +22,7 @@ header {
   padding: 3px 0;
 }
 
-h1 {
+header h1 {
   font-family: 'Raleway', 'Helvetica', sans-serif;
   font-size: 3rem;
   font-weight: 700;
@@ -155,7 +157,7 @@ h1 {
   width: 45%;
   top: 100px;
   left: 33%;
-  background-color: rgba(144, 12, 63, 0.5);
+  background-color: rgba(144, 12, 63, 0.35);
   border: 9px groove #aa8f77;
   box-shadow: 2px 4px 10% #900c3f;
 }
@@ -171,12 +173,83 @@ h1 {
   font-size: 36px;
   font-weight: 800;
   background-color: #900c3f;
+  border: 2px solid #ffffff;
   color: #ffffff;
 }
 
 .modal-head #x {
   display: block;
-  margin-top: -6px;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+/* Modal content styling */
+
+.modal-content {
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.55px;
+  font-weight: 600;
+}
+
+.modal-content h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  margin-bottom: 35px;
+  text-align: center;
+  text-shadow: 3.5px 4.5px 5px #900c3f;
+}
+
+.modal-content hr,
+.modal-content #bottom {
+  height: 3.5px;
+  background-color: #900c3f;
+  margin-bottom: 35px;
+}
+
+.modal-content #input1,
+               #input2,
+               #input3 {
+  margin: 25px 0;
+}
+
+.modal-content #input1 input,
+.modal-content #input2 input,
+.modal-content #input3 input {
+  height: 25px;
+  width: 300px;
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-variant: small-caps;
+  color: #808080;
+  background-color:snow;
+  border: 3px solid #900c3f;
+  border-radius: 12px;
+  padding: 3px 15px;
+}
+
+#input1 label,
+#input2 label,
+#input3 label {
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 800;
+  color: #900c3f;
+  padding-right: 15px;
+}
+
+#input1 label::before {
+  content: '\2007\2007\2007\2007
+  \2007\2007\2007\2007\2007';
+}
+
+#input2 label::before {
+  content: '\2007\2007';
 }
 
 .visible {

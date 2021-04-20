@@ -10,3 +10,11 @@ const breedOrigin = document.getElementById('origin');
 const lifeExpectancy = document.getElementById('avgLifeSpan');
 const breedButton = document.getElementById('addBreed');
 const cancelButton = document.getElementById('reset');
+
+class dogBreed {
+  constructor(breed, origin, lifeSpan) {
+    this.breed = breed;
+    this.origin = origin;
+    this.lifeSpan = lifeSpan;
+  }
+}

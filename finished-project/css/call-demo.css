@@ -307,7 +307,7 @@ header h1 {
 }
 
 .visible {
-  display: table-row;
+  display: visible;
 }
 
 .invisible {

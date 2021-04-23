@@ -69,3 +69,48 @@ main {
   z-index: 99;
 }
 
+/* Table styling */
+
+table#dogList {
+  width: 850px;
+  margin: 12px auto 75px auto;
+  border: 2px outset #aa8f77;
+  border-collapse: collapse;
+}
+
+table#dogList caption {
+  caption-side: bottom;
+  font-size: 23px;
+  margin: 0;
+  padding: 3px 0;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-shadow: 2.5px 3.5px 4.5px #900c3f;
+  color: #ffffff;
+  background-color: #aa8f77;
+  border: 2px outset #aa8f77;
+}
+
+table#dogList th {
+  border: 2.5px solid #900c3f;
+  border-collapse: collapse;
+  background-color: #aa8f77;
+  color: #ffffff;
+  padding: 9px 15px;
+  font-size: 21px;
+  font-weight: 800;
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+table#dogList td {
+  border: 2.5px solid #900c3f;
+  border-collapse: collapse;
+  padding: 9px 15px;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 800;
+  color: #900c3f;
+}

@@ -24,5 +24,5 @@ To build this mini-project, download the [starter code](https://github.com/RHieg
 
 Here you can also download the [finished project code](https://github.com/RHieger/my-favorite-dogs/releases).
 
-For further information, please consult the associate article,
+For further information, please consult the associated article,
 **_A Quick Look at the JavaScript call() method_** on Medium.com

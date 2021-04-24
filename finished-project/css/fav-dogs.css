@@ -125,7 +125,7 @@ table#dogList td {
 
 /* Button Bar styling */
 
-div#buttonControls {
+.buttonControls {
   width: 625px;
   background-color: #900c3f;
   border-radius: 12px;
@@ -136,8 +136,8 @@ div#buttonControls {
   align-items: center;
 }
 
-div#buttonControls button,
-div#buttonControls:visited {
+.buttonControls button,
+.buttonControls:visited {
   width: 275px;
   height: 45px;
   background-color: #aa8f77;
@@ -152,7 +152,7 @@ div#buttonControls:visited {
   letter-spacing: 0.75px;
 }
 
-div#buttonControls button:hover {
+.buttonControls button:hover {
   background-color: #ffffff;
   border-color: #000000;
   color: #900c3f;
@@ -160,7 +160,7 @@ div#buttonControls button:hover {
   transition: all ease-in-out 1s;
 }
 
-div#buttonControls button:active {
+.buttonControls button:active {
   box-shadow: -2px -4px -4.5px #000000;
   border-style: inset;
   border-width: 5px;

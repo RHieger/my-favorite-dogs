@@ -7,7 +7,7 @@
   <title>My Favorite Dogs</title>
   <link rel="stylesheet" href="./css/normalize.css" />
   <link rel="stylesheet" href="./css/fav-dogs.css" />
-  <script src="./js/app.js"></script>
+  <script src="./js/app.js" defer></script>
 </head>
 <body>
   
@@ -30,7 +30,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr id="noBreed" class="placeholder">
+        <tr id="noBreed" class="placeholder visible">
           <td colspan="3">NO BREED ENTERED</td>
         </tr>
       </tbody>
@@ -40,7 +40,7 @@
 
     <!-- CONTROL BUTTON BAR -->
 
-    <div id="buttonControls">
+    <div id="buttons" class="buttonControls visible">
       <button type="submit" id="addBreed">
         add your favorite breed
       </button>

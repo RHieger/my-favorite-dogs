@@ -115,6 +115,14 @@ table#dogList td {
   color: #900c3f;
 }
 
+.placeholder {
+  font-size: 28px !important;
+  letter-spacing: 0.55px;
+  height: 50px;
+  padding: 12px 0;
+  background: rgba(170, 143, 119, 0.25);
+}
+
 /* Button Bar styling */
 
 div#buttonControls {

@@ -204,3 +204,49 @@ div#buttonControls button:active {
   color: #900c3f;
   border: 3px inset #808080;
 }
+
+#modalContent h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 0;
+  color: #ffffff;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 3.5px 4.5px 5px #900c3f;
+}
+
+#modalContent hr {
+  height: 3.5px;
+  background-color: #900c3f;
+  margin-bottom: 35px;
+}
+
+#modalContent hr#bottom {
+  margin-top: 35px;
+}
+
+#modalInputs {
+  margin-left: 85px;
+}
+
+#modalInputs label {
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 800;
+  color: #900c3f;
+}
+
+#modalInputs input[type='text'] {
+  display: block;
+  margin: 0 0 25px 0;
+  height: 25px;
+  width: 300px;
+  font-variant: small-caps;
+  color: #808080;
+  background-color:snow;
+  border: 3px solid #900c3f;
+  border-radius: 12px;
+  padding: 3px 15px;
+  font-weight: 600;
+}

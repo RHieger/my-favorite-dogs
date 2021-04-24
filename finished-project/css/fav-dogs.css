@@ -62,7 +62,7 @@ header h1 {
 /* <main> styling */
 
 main {
-  margin-top: 50px;
+  margin-top: 0;
   width: 98%;
   margin-left: auto;
   margin-right: auto;
@@ -175,11 +175,13 @@ div#buttonControls button:active {
   left: 25%;
   padding: 0px 35px 50px 35px;
   width: 45%;
-  height: 415px;
+  height: 465px;
   background-color: rgba(144, 12, 63, 0.35);
   border: 9px ridge #aa8f77;
   box-shadow: 2px 4px 10% #900c3f;
 }
+
+/* Styling for modal header */
 
 .headContent {
   width: 5%;
@@ -204,6 +206,8 @@ div#buttonControls button:active {
   color: #900c3f;
   border: 3px inset #808080;
 }
+
+/* Styling for main modal content */
 
 #modalContent h1 {
   font-size: 36px;
@@ -249,4 +253,56 @@ div#buttonControls button:active {
   border-radius: 12px;
   padding: 3px 15px;
   font-weight: 600;
+}
+
+/* Styling for modal footer buttons */
+
+#modalFoot button,
+#modalFoot button:visited {
+  height: 45px;
+  width: 200px;
+  background-color: rgba(170, 143, 119, 0.5);
+  color: #900c3f;
+  font-size: 19.5px;
+  font-weight: 700;
+  font-variant: small-caps;
+  border: 3px outset #c0c0c0;
+  border-radius: 15px;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+#modalFoot button:first-of-type {
+  margin-right: 15px;
+}
+
+#modalFoot button:hover {
+  border-style: inset;
+  background-color: #900c3f;
+  color: #d47623;
+  font-size: 20.5px;
+  font-weight: 800;
+  box-shadow: 3px 4px 6px #e9095f;
+  transition: all ease-in-out 0.5s;
+}
+
+#modalFoot button:active {
+  border-style: inset;
+  background-color: #900c3f;
+  color: #ff7700;
+  font-size: 21px;
+  font-weight: 800;
+  box-shadow: 4px 5px 6px #e9095f;
+  transition: all ease-in-out 0.25s;
+}
+
+/* Styling for hiding and unhiding nodes */
+
+.visible {
+  display: visible;
+}
+
+.invisible {
+  display: none;
 }

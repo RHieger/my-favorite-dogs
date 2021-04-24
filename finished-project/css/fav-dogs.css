@@ -166,3 +166,41 @@ div#buttonControls button:active {
   border-width: 5px;
   transition: none;
 }
+
+/* Modal Dialogue Box styling */
+
+.dialogue {
+  position: fixed;
+  top: 150px;
+  left: 25%;
+  padding: 0px 35px 50px 35px;
+  width: 45%;
+  height: 415px;
+  background-color: rgba(144, 12, 63, 0.35);
+  border: 9px ridge #aa8f77;
+  box-shadow: 2px 4px 10% #900c3f;
+}
+
+.headContent {
+  width: 5%;
+  height: 32px;
+  margin-top: 0;
+  margin-left: -34px;
+  border: 3px solid #900c3f;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  background-color: #900c3f;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.headContent #xButton {
+  cursor: pointer;
+}
+
+.headContent:hover {
+  background-color: #ffffff;
+  color: #900c3f;
+  border: 3px inset #808080;
+}

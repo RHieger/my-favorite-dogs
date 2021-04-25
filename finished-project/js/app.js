@@ -8,6 +8,14 @@ const openModalButton = document.getElementById('addBreed');
 const xButton = document.getElementById('xButton');
 const resetButton = document.getElementById('reset');
 
+class Dog {
+  constructor(breed, origin, lifeSpan) {
+    this.breed = breed;
+    this.origin = origin;
+    this.lifeSpan = lifeSpan;
+  }
+}
+
 const showModal = () => {
   // Remove button bar
   buttonRow.classList.replace('visible', 'invisible');

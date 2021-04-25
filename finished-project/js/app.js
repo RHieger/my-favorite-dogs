@@ -5,6 +5,8 @@ const modalDialogue = document.getElementById('modal');
 
 const openModalButton = document.getElementById('addBreed');
 
+const xButton = document.getElementById('xButton');
+
 const showModal = () => {
   // Remove button bar
   buttonRow.classList.replace('visible', 'invisible');
@@ -14,4 +16,14 @@ const showModal = () => {
   modalDialogue.classList.replace('invisible', 'visible');
 };
 
+const closeModal = () => {
+  // Hide modal
+  modalDialogue.classList.replace('visible', 'invisible');
+  // Restore table
+  dogTable.classList.replace('invisible', 'visible');
+  // Restore button bar
+  buttonRow.classList.replace('invisible', 'visible');
+};
+
 openModalButton.addEventListener('click', showModal);
+xButton.addEventListener('click', closeModal);

@@ -125,19 +125,19 @@ table#dogList td {
 
 /* Button Bar styling */
 
-.buttonControls {
-  width: 625px;
+.buttonControl {
+  width: 300px;
   background-color: #900c3f;
   border-radius: 12px;
-  margin-left: 385px;
+  margin-left: 395px;
   height: 75px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.buttonControls button,
-.buttonControls:visited {
+.buttonControl button,
+.buttonControl:visited {
   width: 275px;
   height: 45px;
   background-color: #aa8f77;
@@ -152,7 +152,7 @@ table#dogList td {
   letter-spacing: 0.75px;
 }
 
-.buttonControls button:hover {
+.buttonControl button:hover {
   background-color: #ffffff;
   border-color: #000000;
   color: #900c3f;
@@ -160,7 +160,7 @@ table#dogList td {
   transition: all ease-in-out 1s;
 }
 
-.buttonControls button:active {
+.buttonControl button:active {
   box-shadow: -2px -4px -4.5px #000000;
   border-style: inset;
   border-width: 5px;

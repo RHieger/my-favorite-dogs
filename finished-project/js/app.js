@@ -6,6 +6,7 @@ const modalDialogue = document.getElementById('modal');
 const openModalButton = document.getElementById('addBreed');
 
 const xButton = document.getElementById('xButton');
+const resetButton = document.getElementById('reset');
 
 const showModal = () => {
   // Remove button bar
@@ -27,3 +28,4 @@ const closeModal = () => {
 
 openModalButton.addEventListener('click', showModal);
 xButton.addEventListener('click', closeModal);
+resetButton.addEventListener('click', closeModal);

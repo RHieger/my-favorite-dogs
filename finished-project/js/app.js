@@ -33,4 +33,15 @@ const showModal = () => {
   showElement(modalDialogue);
 };
 
+const cancelModal = () => {
+  // Hide modal dialogue
+  hideElement(modal);
+  // Restore dog table
+  showElement(dogTable);
+  // Restore button row
+  showElement(buttonRow);
+};
+
 addBreed.addEventListener('click', showModal);
+resetButton.addEventListener('click', cancelModal);
+xButton.addEventListener('click', cancelModal);

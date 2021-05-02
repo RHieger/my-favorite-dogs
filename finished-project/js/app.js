@@ -1,39 +1,36 @@
-const dogTable = document.getElementById('dogBreeds');
+const dogTable = document.getElementById('dogList');
+const dogTableBody = document.querySelector('tbody');
 const placeHolder = document.getElementById('noBreed');
-const buttonRow = document.getElementById('buttons');
+const buttonRow = document.getElementById('buttonRow');
+const addBreed = document.getElementById('addBreed');
 const modalDialogue = document.getElementById('modal');
+
+const modalBreed = document.getElementById('breedName');
+const modalOrigin = document.getElementById('origin');
+const modalLifeSpan = document.getElementById('avgLifeSpan');
 
 const openModalButton = document.getElementById('addBreed');
 
 const xButton = document.getElementById('xButton');
 const resetButton = document.getElementById('reset');
 
-class Dog {
-  constructor(breed, origin, lifeSpan) {
-    this.breed = breed;
-    this.origin = origin;
-    this.lifeSpan = lifeSpan;
-  }
-}
+const submitFavorite = document.getElementById('submitBreed');
+
+const hideElement = (nodeName) => {
+  nodeName.classList.replace('visible', 'invisible');
+};
+
+const showElement = (nodeName) => {
+  nodeName.classList.replace('invisible', 'visible');
+};
 
 const showModal = () => {
-  // Remove button bar
-  buttonRow.classList.replace('visible', 'invisible');
-  // Hide table
-  dogTable.classList.replace('visible', 'invisible');
-  // Show Modal Dialogue
-  modalDialogue.classList.replace('invisible', 'visible');
+  // Hide dog table
+  hideElement(dogTable);
+  // Hide 'Add Your Favorite Breed' button row
+  hideElement(buttonRow);
+  // Reveal modal dialogue
+  showElement(modalDialogue);
 };
 
-const closeModal = () => {
-  // Hide modal
-  modalDialogue.classList.replace('visible', 'invisible');
-  // Restore table
-  dogTable.classList.replace('invisible', 'visible');
-  // Restore button bar
-  buttonRow.classList.replace('invisible', 'visible');
-};
-
-openModalButton.addEventListener('click', showModal);
-xButton.addEventListener('click', closeModal);
-resetButton.addEventListener('click', closeModal);
+addBreed.addEventListener('click', showModal);

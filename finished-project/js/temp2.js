@@ -80,3 +80,7 @@ submitFavorite.addEventListener('click', () => {
   dogTableBody.nextSibling
   */
 });
+
+const clearModalValues = () => {
+  
+};

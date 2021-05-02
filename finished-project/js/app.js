@@ -1,5 +1,6 @@
 const dogTable = document.getElementById('dogList');
 const dogTableBody = document.querySelector('tbody');
+const dogTableFoot = document.querySelector('tofoot');
 const placeHolder = document.getElementById('noBreed');
 const buttonRow = document.getElementById('buttonRow');
 const addBreed = document.getElementById('addBreed');
@@ -33,7 +34,10 @@ const showModal = () => {
   showElement(modalDialogue);
 };
 
-const cancelModal = () => {
+const closeModal = () => {
+  // Close modal and restore any table
+  // rows formerly displayed.
+
   // Hide modal dialogue
   hideElement(modal);
   // Restore dog table
@@ -42,6 +46,43 @@ const cancelModal = () => {
   showElement(buttonRow);
 };
 
+const getBreedValues = () => {
+  const breedValues = [];
+  breedValues.push(modalBreed.value);
+  breedValues.push(modalOrigin.value);
+  breedValues.push(modalLifeSpan.value);
+  return breedValues;
+};
+
+const addTableRow = () => {
+// Build table row for favorite breed
+  const newRow = document.createElement('tr');
+  const col1 = document.createElement('td');
+  const col2 = document.createElement('td');
+  const col3 = document.createElement('td');
+
+  // Add new row to table
+  dogTableBody.appendChild(newRow);
+  newRow.append(col1, col2, col3);
+  return newRow;
+};
+
 addBreed.addEventListener('click', showModal);
-resetButton.addEventListener('click', cancelModal);
-xButton.addEventListener('click', cancelModal);
+resetButton.addEventListener('click', closeModal);
+xButton.addEventListener('click', closeModal);
+submitFavorite.addEventListener('click', () => {
+  closeModal();
+
+  if (placeHolder) {
+    placeHolder.remove();
+  }
+
+  const newRow = addTableRow();
+  dogTableBody.append(newRow);
+  const dogValues = getBreedValues();
+  const columns = newRow.children;
+  console.log(columns);
+  columns[0].textContent = dogValues[0];
+  columns[1].textContent = dogValues[1];
+  columns[2].textContent = dogValues[2];
+});

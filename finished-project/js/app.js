@@ -46,6 +46,12 @@ const closeModal = () => {
   showElement(buttonRow);
 };
 
+const resetModalValues = () => {
+  modalBreed.value = '';
+  modalOrigin.value = '';
+  modalLifeSpan.value = '';
+};
+
 const getBreedValues = () => {
   const breedValues = [];
   breedValues.push(modalBreed.value);
@@ -85,4 +91,5 @@ submitFavorite.addEventListener('click', () => {
   columns[0].textContent = dogValues[0];
   columns[1].textContent = dogValues[1];
   columns[2].textContent = dogValues[2];
+  resetModalValues();
 });

@@ -116,14 +116,6 @@ table#dogList td {
   color: #900c3f;
 }
 
-.placeholder {
-  font-size: 28px !important;
-  letter-spacing: 0.55px;
-  height: 50px;
-  padding: 12px 0;
-  background: rgba(170, 143, 119, 0.25);
-}
-
 /* Button Bar styling */
 
 .buttonControl {
@@ -172,11 +164,11 @@ table#dogList td {
 
 .dialogue {
   position: fixed;
-  top: 150px;
+  top: 115px;
   left: 25%;
   padding: 0px 35px 50px 35px;
   width: 45%;
-  height: 465px;
+  height: 550px;
   background-color: rgba(144, 12, 63, 0.35);
   border: 9px ridge #aa8f77;
   box-shadow: 2px 4px 10% #900c3f;
@@ -244,7 +236,6 @@ table#dogList td {
 
 #modalInputs input[type='text'] {
   display: block;
-  margin: 0 0 25px 0;
   height: 25px;
   width: 300px;
   font-variant: small-caps;
@@ -254,6 +245,14 @@ table#dogList td {
   border-radius: 12px;
   padding: 3px 15px;
   font-weight: 600;
+}
+
+.example {
+  font-weight: 700;
+  color: #900c3f;
+  text-transform: none;
+  margin-top: 3px;
+  margin-bottom: 15px;
 }
 
 /* Styling for modal footer buttons */

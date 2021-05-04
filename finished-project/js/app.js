@@ -34,6 +34,12 @@ const showModal = () => {
   showElement(modalDialogue);
 };
 
+const resetModalValues = () => {
+  modalBreed.value = '';
+  modalOrigin.value = '';
+  modalLifeSpan.value = '';
+};
+
 const closeModal = () => {
   // Close modal and restore any table
   // rows formerly displayed.
@@ -44,13 +50,10 @@ const closeModal = () => {
   showElement(dogTable);
   // Restore button row
   showElement(buttonRow);
+  // Reset model inputs
+  resetModalValues();
 };
 
-const resetModalValues = () => {
-  modalBreed.value = '';
-  modalOrigin.value = '';
-  modalLifeSpan.value = '';
-};
 
 const getBreedValues = () => {
   const breedValues = [];
@@ -86,8 +89,8 @@ submitFavorite.addEventListener('click', () => {
   const newRow = addTableRow();
   dogTableBody.append(newRow);
   const dogValues = getBreedValues();
+  // Capture newRow child nodes
   const columns = newRow.children;
-  console.log(columns);
   columns[0].textContent = dogValues[0];
   columns[1].textContent = dogValues[1];
   columns[2].textContent = dogValues[2];

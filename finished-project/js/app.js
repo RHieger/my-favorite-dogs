@@ -80,7 +80,6 @@ addBreed.addEventListener('click', showModal);
 resetButton.addEventListener('click', closeModal);
 xButton.addEventListener('click', closeModal);
 submitFavorite.addEventListener('click', () => {
-  closeModal();
 
   if (placeHolder) {
     placeHolder.remove();
@@ -94,5 +93,6 @@ submitFavorite.addEventListener('click', () => {
   columns[0].textContent = dogValues[0];
   columns[1].textContent = dogValues[1];
   columns[2].textContent = dogValues[2];
-  resetModalValues();
+
+  closeModal();
 });

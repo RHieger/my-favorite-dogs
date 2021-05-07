@@ -13,7 +13,7 @@ const modalLifeSpan = document.getElementById('avgLifeSpan');
 const openModalButton = document.getElementById('addBreed');
 
 const xButton = document.getElementById('xButton');
-const resetButton = document.getElementById('reset');
+const resetButton = document.getElementById('tableReset');
 
 const submitFavorite = document.getElementById('submitBreed');
 
@@ -64,7 +64,7 @@ const getBreedValues = () => {
 };
 
 const addTableRow = () => {
-// Build table row for favorite breed
+  // Build table row for favorite breed
   const newRow = document.createElement('tr');
   const col1 = document.createElement('td');
   const col2 = document.createElement('td');
@@ -74,6 +74,17 @@ const addTableRow = () => {
   dogTableBody.appendChild(newRow);
   newRow.append(col1, col2, col3);
   return newRow;
+};
+
+
+// This method of removing rows found on StackOverFlow,
+// Option 2B:
+// https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+
+const removeTableRows = () => {
+  while (dogTableBody.lastChild) {
+    dogTableBody.removeChild(dogTableBody.lastChild);
+  }
 };
 
 addBreed.addEventListener('click', showModal);
@@ -95,4 +106,8 @@ submitFavorite.addEventListener('click', () => {
   columns[2].textContent = dogValues[2];
 
   closeModal();
+});
+resetButton.addEventListener('click', () => {
+  removeTableRows();
+  dogTableBody.appendChild(placeHolder);
 });

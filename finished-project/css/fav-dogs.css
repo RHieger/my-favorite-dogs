@@ -172,6 +172,36 @@ table#dogList td {
   background-color: rgba(144, 12, 63, 0.35);
   border: 9px ridge #aa8f77;
   box-shadow: 2px 4px 10% #900c3f;
+  animation: fadeIn 2s;
+}
+
+.dialogueFadeIn {
+  animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* Styling for modal header */

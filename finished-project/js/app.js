@@ -39,6 +39,10 @@ const showModal = () => {
   showElement(modalDialogue);
 };
 
+const getFocus = (node) => {
+  document.getElementById(node).focus();
+};
+
 const resetModalValues = () => {
   modalBreed.value = '';
   modalOrigin.value = '';
@@ -58,7 +62,6 @@ const closeModal = () => {
   // Reset model inputs
   resetModalValues();
 };
-
 
 const getBreedValues = () => {
   const breedValues = [];
@@ -81,26 +84,7 @@ const addTableRow = () => {
   return newRow;
 };
 
-
-// This method of removing rows found on StackOverFlow,
-// Option 2B:
-// https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
-
-const removeTableRows = () => {
-  while (dogTableBody.lastChild) {
-    dogTableBody.removeChild(dogTableBody.lastChild);
-  }
-};
-
-addBreed.addEventListener('click', showModal);
-// resetButton.addEventListener('click', closeModal);
-resetButton.addEventListener('click', () => {
-  removeTableRows();
-  dogTableBody.appendChild(placeHolder);
-});
-xButton.addEventListener('click', closeModal);
-submitFavorite.addEventListener('click', () => {
-
+const addFavoriteBreed = () => {
   if (placeHolder) {
     placeHolder.remove();
   }
@@ -115,5 +99,49 @@ submitFavorite.addEventListener('click', () => {
   columns[2].textContent = dogValues[2];
 
   closeModal();
+};
+
+
+// This method of removing rows found on StackOverFlow,
+// Option 2B:
+// https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+
+const removeTableRows = () => {
+  while (dogTableBody.lastChild) {
+    dogTableBody.removeChild(dogTableBody.lastChild);
+  }
+};
+
+addBreed.addEventListener('click', () => {
+  showModal();
+  getFocus('breedName');
 });
+// resetButton.addEventListener('click', closeModal);
+resetButton.addEventListener('click', () => {
+  removeTableRows();
+  dogTableBody.appendChild(placeHolder);
+});
+
+xButton.addEventListener('click', closeModal);
+
+submitFavorite.addEventListener('click', addFavoriteBreed);
+
 cancelButton.addEventListener('click', closeModal);
+
+modalBreed.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    getFocus('origin');
+  }
+});
+
+modalOrigin.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    getFocus('avgLifeSpan');
+  }
+});
+
+modalLifeSpan.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    addFavoriteBreed();
+  }
+});

@@ -1,0 +1,339 @@
+/* Base font for page typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Global typography */
+
+body {
+  font-family: 'Raleway', 'Helvetica', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+}
+
+/* Styling for headings */
+
+h1 {
+  font-size: 3.25rem;
+}
+
+h2 {
+  font-size: 2.85rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.35rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-variant: small-caps;
+}
+
+/* <header> styling */
+
+header {
+  position: sticky;
+  top: 0;
+  width: 98%;
+  margin: 0 auto 50px auto;
+  background-color: #aa8f77;  /* Patterned after pug fur */
+  padding: 3px 0;
+}
+
+header h1 {
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 1.25px;
+  color: #ffffff; /* White */
+  text-align: center;
+  text-shadow: 3.5px 4.5px 5px #900c3f;
+}
+
+/* <main> styling */
+
+main {
+  margin-top: 0;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 99;
+}
+
+/* Table styling */
+
+table#dogList {
+  width: 850px;
+  margin: 12px auto 75px auto;
+  border: 2px outset #aa8f77;
+  border-collapse: collapse;
+}
+
+table#dogList caption {
+  caption-side: bottom;
+  font-size: 23px;
+  margin: 0;
+  padding: 3px 0;
+  font-weight: 700;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-shadow: 2.5px 3.5px 4.5px #900c3f;
+  color: #ffffff;
+  background-color: #aa8f77;
+  border: 2px outset #aa8f77;
+}
+
+table#dogList th {
+  border: 2.5px solid #900c3f;
+  border-collapse: collapse;
+  background-color: #aa8f77;
+  color: #ffffff;
+  padding: 9px 15px;
+  font-size: 21px;
+  font-weight: 800;
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+table#dogList td {
+  border: 2.5px solid #900c3f;
+  border-collapse: collapse;
+  padding: 9px 15px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #900c3f;
+}
+
+/* Button Bar styling */
+
+.buttonControl {
+  width: 615px;
+  background-color: #900c3f;
+  border-radius: 12px;
+  margin-left: 395px;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttonControl button,
+.buttonControl:visited {
+  width: 275px;
+  height: 45px;
+  background-color: #aa8f77;
+  border: 2px outset #ffffff;
+  outline: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+
+.buttonControl button:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+  color: #900c3f;
+  font-weight: 800;
+  transition: all ease-in-out 1s;
+}
+
+.buttonControl button:active {
+  box-shadow: -2px -4px -4.5px #000000;
+  border-style: inset;
+  border-width: 5px;
+  transition: none;
+}
+
+/* Modal Dialogue Box styling */
+
+.dialogue {
+  position: fixed;
+  top: 115px;
+  left: 25%;
+  padding: 0px 35px 50px 35px;
+  width: 45%;
+  height: 550px;
+  background-color: rgba(144, 12, 63, 0.35);
+  border: 9px ridge #aa8f77;
+  box-shadow: 2px 4px 10% #900c3f;
+  animation: fadeIn 2s;
+}
+
+.dialogueFadeIn {
+  animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -webkit-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Styling for modal header */
+
+.headContent {
+  width: 5%;
+  height: 32px;
+  margin-top: 0;
+  margin-left: -34px;
+  border: 3px solid #900c3f;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  background-color: #900c3f;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.headContent #xButton {
+  cursor: pointer;
+}
+
+.headContent:hover {
+  background-color: #ffffff;
+  color: #900c3f;
+  border: 3px inset #808080;
+}
+
+/* Styling for main modal content */
+
+#modalContent h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-top: 0;
+  color: #ffffff;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 3.5px 4.5px 5px #900c3f;
+}
+
+#modalContent hr {
+  height: 3.5px;
+  background-color: #900c3f;
+  margin-bottom: 35px;
+}
+
+#modalContent hr#bottom {
+  margin-top: 35px;
+}
+
+#modalInputs {
+  margin-left: 85px;
+}
+
+#modalInputs label {
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 800;
+  color: #900c3f;
+}
+
+#modalInputs input[type='text'] {
+  display: block;
+  height: 25px;
+  width: 300px;
+  outline: none;
+  font-variant: small-caps;
+  color: #808080;
+  background-color:snow;
+  border: 3px solid #900c3f;
+  border-radius: 12px;
+  padding: 3px 15px;
+  font-weight: 600;
+}
+
+.example {
+  font-weight: 700;
+  color: #900c3f;
+  text-transform: none;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+/* Styling for modal footer buttons */
+
+#modalFoot button,
+#modalFoot button:visited {
+  height: 45px;
+  width: 200px;
+  background-color: rgba(170, 143, 119, 0.5);
+  color: #900c3f;
+  font-size: 19.5px;
+  font-weight: 700;
+  font-variant: small-caps;
+  border: 3px outset #c0c0c0;
+  border-radius: 15px;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+#modalFoot button:first-of-type {
+  margin-right: 15px;
+}
+
+#modalFoot button:hover {
+  border-style: inset;
+  background-color: #900c3f;
+  color: #d47623;
+  font-size: 20.5px;
+  font-weight: 800;
+  box-shadow: 3px 4px 6px #e9095f;
+  transition: all ease-in-out 0.5s;
+}
+
+#modalFoot button:active {
+  border-style: inset;
+  background-color: #900c3f;
+  color: #ff7700;
+  font-size: 21px;
+  font-weight: 800;
+  box-shadow: 4px 5px 6px #e9095f;
+  transition: all ease-in-out 0.25s;
+}
+
+/* Styling for hiding and unhiding nodes */
+
+.visible {
+  display: visible;
+}
+
+.invisible {
+  display: none;
+}

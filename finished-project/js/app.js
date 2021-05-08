@@ -16,6 +16,7 @@ const xButton = document.getElementById('xButton');
 const resetButton = document.getElementById('tableReset');
 
 const submitFavorite = document.getElementById('submitBreed');
+const cancelButton = document.getElementById('cancel');
 
 const hideElement = (nodeName) => {
   nodeName.classList.replace('visible', 'invisible');
@@ -23,6 +24,10 @@ const hideElement = (nodeName) => {
 
 const showElement = (nodeName) => {
   nodeName.classList.replace('invisible', 'visible');
+};
+
+const switchClass = (nodeName) => {
+  nodeName.classList.replace('dialogueFadeIn', 'dialogueFadeOut');
 };
 
 const showModal = () => {
@@ -88,7 +93,11 @@ const removeTableRows = () => {
 };
 
 addBreed.addEventListener('click', showModal);
-resetButton.addEventListener('click', closeModal);
+// resetButton.addEventListener('click', closeModal);
+resetButton.addEventListener('click', () => {
+  removeTableRows();
+  dogTableBody.appendChild(placeHolder);
+});
 xButton.addEventListener('click', closeModal);
 submitFavorite.addEventListener('click', () => {
 
@@ -107,7 +116,4 @@ submitFavorite.addEventListener('click', () => {
 
   closeModal();
 });
-resetButton.addEventListener('click', () => {
-  removeTableRows();
-  dogTableBody.appendChild(placeHolder);
-});
+cancelButton.addEventListener('click', closeModal);

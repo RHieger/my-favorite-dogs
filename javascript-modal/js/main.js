@@ -1,8 +1,10 @@
-let imageSF = document.querySelector('.trip-image');
-let backdrop = document.querySelector('.backdrop');
-let modal = document.querySelector('.modal');
+const imageSF = document.querySelector('.trip-image');
+const backdrop = document.querySelector('.backdrop');
+const modal = document.querySelector('.modal');
 
-const openModal = () => {
- backdrop.style.dispay = 'block';
- modal.style.dispay = 'block';
+const openModal = () =>  {
+ backdrop.style.display = 'block';
+ modal.style.display = 'block';
 };
+
+imageSF.onclick = openModal;

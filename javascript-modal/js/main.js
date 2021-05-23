@@ -7,4 +7,9 @@ const openModal = () =>  {
  modal.style.display = 'block';
 };
 
+const closeModal = () => {
+  backdrop.style.display = 'none';
+  modal.style.display = 'none'; 
+};
+
 imageSF.onclick = openModal;

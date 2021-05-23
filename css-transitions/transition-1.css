@@ -1,0 +1,12 @@
+#box {
+  height: 500px;
+  width: 500px;
+  margin: 35px auto;
+  border: 5px solid #000000;
+  border-radius: 12px;
+  background-color: #add8e6;  /* Light Blue */
+  transition-property: border,
+  border-radius, background-color, opacity;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+}

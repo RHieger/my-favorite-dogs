@@ -13,3 +13,4 @@ const closeModal = () => {
 };
 
 imageSF.onclick = openModal;
+backdrop.onclick = closeModal;

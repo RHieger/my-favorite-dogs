@@ -1,23 +1,27 @@
+// DOM objects for table of breeds
 const dogTable = document.getElementById('dogList');
 const dogTableBody = document.querySelector('tbody');
 const dogTableFoot = document.querySelector('tofoot');
 const placeHolder = document.getElementById('noBreed');
 const buttonRow = document.getElementById('buttonRow');
 const addBreed = document.getElementById('addBreed');
-const modalDialogue = document.getElementById('modal');
+
+// DOM objects for ADD YOUR FAVORITE BREED
+// and RESET buttons 
+const openModalButton = document.getElementById('addBreed');
+const resetButton = document.getElementById('tableReset');
+
+// Shaded modal backdrop DOM object 
 const scrim = document.querySelector('.scrim');
 
+// DOM objects for modal dialogue box
+const modalDialogue = document.getElementById('modal');
 const modalBreed = document.getElementById('breedName');
 const modalOrigin = document.getElementById('origin');
 const modalLifeSpan = document.getElementById('avgLifeSpan');
-
-const openModalButton = document.getElementById('addBreed');
-
 const xButton = document.getElementById('xButton');
-const resetButton = document.getElementById('tableReset');
-
-const submitFavorite = document.getElementById('submitBreed');
 const cancelButton = document.getElementById('cancel');
+const submitFavorite = document.getElementById('submitBreed');
 
 const hideElement = (nodeName) => {
   nodeName.classList.replace('visible', 'invisible');
@@ -27,15 +31,7 @@ const showElement = (nodeName) => {
   nodeName.classList.replace('invisible', 'visible');
 };
 
-const switchClass = (nodeName) => {
-  nodeName.classList.replace('dialogueFadeIn', 'dialogueFadeOut');
-};
-
 const showModal = () => {
-  // Hide dog table
-  // hideElement(dogTable);
-  // Hide 'Add Your Favorite Breed' button row
-  // hideElement(buttonRow);
   // Reveal modal dialogue
   showElement(modalDialogue);
   showElement(scrim);
@@ -52,15 +48,8 @@ const resetModalValues = () => {
 };
 
 const closeModal = () => {
-  // Close modal and restore any table
-  // rows formerly displayed.
-
   // Hide modal dialogue
   hideElement(modal);
-  // Restore dog table
-  showElement(dogTable);
-  // Restore button row
-  showElement(buttonRow);
   // Reset model inputs
   resetModalValues();
 };
@@ -119,7 +108,7 @@ addBreed.addEventListener('click', () => {
   showElement(scrim);
   getFocus('breedName');
 });
-// resetButton.addEventListener('click', closeModal);
+
 resetButton.addEventListener('click', () => {
   removeTableRows();
   dogTableBody.appendChild(placeHolder);

@@ -5,6 +5,7 @@ const placeHolder = document.getElementById('noBreed');
 const buttonRow = document.getElementById('buttonRow');
 const addBreed = document.getElementById('addBreed');
 const modalDialogue = document.getElementById('modal');
+const scrim = document.querySelector('.scrim');
 
 const modalBreed = document.getElementById('breedName');
 const modalOrigin = document.getElementById('origin');
@@ -32,11 +33,12 @@ const switchClass = (nodeName) => {
 
 const showModal = () => {
   // Hide dog table
-  hideElement(dogTable);
+  // hideElement(dogTable);
   // Hide 'Add Your Favorite Breed' button row
-  hideElement(buttonRow);
+  // hideElement(buttonRow);
   // Reveal modal dialogue
   showElement(modalDialogue);
+  showElement(scrim);
 };
 
 const getFocus = (node) => {
@@ -114,6 +116,7 @@ const removeTableRows = () => {
 
 addBreed.addEventListener('click', () => {
   showModal();
+  showElement(scrim);
   getFocus('breedName');
 });
 // resetButton.addEventListener('click', closeModal);
@@ -124,7 +127,10 @@ resetButton.addEventListener('click', () => {
 
 xButton.addEventListener('click', closeModal);
 
-submitFavorite.addEventListener('click', addFavoriteBreed);
+submitFavorite.addEventListener('click', () => {
+  addFavoriteBreed();
+  hideElement(scrim);
+});
 
 cancelButton.addEventListener('click', closeModal);
 
@@ -143,5 +149,6 @@ modalOrigin.addEventListener('keydown', (event) => {
 modalLifeSpan.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
     addFavoriteBreed();
+    hideElement(scrim);
   }
 });

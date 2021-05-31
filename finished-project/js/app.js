@@ -125,14 +125,20 @@ resetButton.addEventListener('click', () => {
   dogTableBody.appendChild(placeHolder);
 });
 
-xButton.addEventListener('click', closeModal);
+xButton.addEventListener('click', () => {
+  closeModal();
+  hideElement(scrim);
+});
 
 submitFavorite.addEventListener('click', () => {
   addFavoriteBreed();
   hideElement(scrim);
 });
 
-cancelButton.addEventListener('click', closeModal);
+cancelButton.addEventListener('click', () => {
+  closeModal();
+  hideElement(scrim);
+});
 
 modalBreed.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {

@@ -51,3 +51,21 @@ const getDogInfo = {
 const dog1 = getDogInfo.info.bind(breed1);
 const dog2 = getDogInfo.info.bind(breed2);
 const dog3 = getDogInfo.info.bind(breed3);
+
+// Reset Table
+
+const resetTable = () => {
+  const noSelection = 'NO BREED SELECTED';
+
+  breedOne.textContent = noSelection;
+  breedOrigin1.textContent = null;
+  breedAvgLife1.textContent = null;
+
+  breedTwo.textContent = noSelection;
+  breedOrigin2.textContent = null;
+  breedAvgLife2.textContent = null;
+
+  breedThree.textContent = noSelection;
+  breedOrigin3.textContent = null;
+  breedAvgLife3.textContent = null;
+};

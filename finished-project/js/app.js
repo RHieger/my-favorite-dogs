@@ -69,3 +69,23 @@ const resetTable = () => {
   breedOrigin3.textContent = null;
   breedAvgLife3.textContent = null;
 };
+
+// Set content for each breed row
+const setRowContent = (
+  column1,
+  column2,
+  column3,
+  breed
+) => {
+  column1.textContent = breed[0];
+  column2.textContent = breed[1];
+  column3.textContent = breed[2];
+};
+
+// Button Event Listeners:
+button1.addEventListener('click', () => {
+  const dogBreed1 = dog1();
+  breedOne.textContent = dogBreed1[0].toUpperCase();
+  breedOrigin1.textContent = dogBreed1[1].toUpperCase();
+  breedAvgLife1.textContent = dogBreed1[2].toUpperCase();
+});

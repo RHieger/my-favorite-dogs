@@ -1,4 +1,5 @@
 // Capture table cells and buttons
+
 const breedOne = document.getElementById('favBreed1');
 const breedOrigin1 = document.getElementById('origin1');
 const breedAvgLife1 = document.getElementById('avgLife1');
@@ -34,3 +35,19 @@ const breed3 = {
   origin: 'england',
   lifeSpan: '12-15 years'
 };
+
+// Get info for each breed object:
+const getDogInfo = {
+  info: function() {
+    return [
+      this.breed,
+      this.origin,
+      this.lifeSpan
+    ];
+  }
+};
+
+// Bound functions:
+const dog1 = getDogInfo.info.bind(breed1);
+const dog2 = getDogInfo.info.bind(breed2);
+const dog3 = getDogInfo.info.bind(breed3);

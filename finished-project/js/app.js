@@ -76,34 +76,44 @@ const resetTable = () => {
 };
 
 // Set content for each breed row
+
 const setRowContent = (
   column1,
   column2,
   column3,
   breed
 ) => {
-  column1.textContent = breed[0];
-  column2.textContent = breed[1];
-  column3.textContent = breed[2];
+  column1.textContent = breed[0].toUpperCase();
+  column2.textContent = breed[1].toUpperCase();
+  column3.textContent = breed[2].toUpperCase();
 };
 
 // Button Event Listeners:
 button1.addEventListener('click', () => {
-  breedOne.textContent = dogBreed1[0].toUpperCase();
-  breedOrigin1.textContent = dogBreed1[1].toUpperCase();
-  breedAvgLife1.textContent = dogBreed1[2].toUpperCase();
+  setRowContent(
+    breedOne,
+    breedOrigin1,
+    breedAvgLife1,
+    dogBreed1
+  );
 });
 
 button2.addEventListener('click', () => {
-  breedTwo.textContent = dogBreed2[0].toUpperCase();
-  breedOrigin2.textContent = dogBreed2[1].toUpperCase();
-  breedAvgLife2.textContent = dogBreed2[2].toUpperCase();
+  setRowContent(
+    breedTwo,
+    breedOrigin2,
+    breedAvgLife2,
+    dogBreed2
+  );
 });
 
 button3.addEventListener('click', () => {
-  breedThree.textContent = dogBreed3[0].toUpperCase();
-  breedOrigin3.textContent = dogBreed3[1].toUpperCase();
-  breedAvgLife3.textContent = dogBreed3[2].toUpperCase();
+  setRowContent(
+    breedThree,
+    breedOrigin3,
+    breedAvgLife3,
+    dogBreed3
+  );
 });
 
 button4.addEventListener('click', resetTable);

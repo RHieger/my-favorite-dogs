@@ -48,14 +48,29 @@ const getDogInfo = {
 };
 
 // Bound functions:
-const dog1 = getDogInfo.info.bind(breed1);
-const dog2 = getDogInfo.info.bind(breed2);
-const dog3 = getDogInfo.info.bind(breed3);
+const dog1 = getDogInfo.info.apply(
+  breed1, [
+    breed1[0],
+    breed1[1],
+    breed1[2]
+  ]
+);
 
-// Dog Data Arrays
-const dogBreed1 = dog1();
-const dogBreed2 = dog2();
-const dogBreed3 = dog3();
+const dog2 = getDogInfo.info.apply(
+  breed2, [
+    breed2[0],
+    breed2[1],
+    breed2[2]
+  ]
+);
+
+const dog3 = getDogInfo.info.apply(
+  breed3, [
+    breed3[0],
+    breed3[1],
+    breed3[2]
+  ]
+);
 
 // Reset Table
 
@@ -94,7 +109,7 @@ button1.addEventListener('click', () => {
     breedOne,
     breedOrigin1,
     breedAvgLife1,
-    dogBreed1
+    dog1
   );
 });
 
@@ -103,7 +118,7 @@ button2.addEventListener('click', () => {
     breedTwo,
     breedOrigin2,
     breedAvgLife2,
-    dogBreed2
+    dog2
   );
 });
 
@@ -112,7 +127,7 @@ button3.addEventListener('click', () => {
     breedThree,
     breedOrigin3,
     breedAvgLife3,
-    dogBreed3
+    dog3
   );
 });
 

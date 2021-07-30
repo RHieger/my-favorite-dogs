@@ -1,6 +1,6 @@
 // JavaScript apply() method examples
 //
-// The tutortial for this code may be found
+// The tutortial is based loosely on the one found
 // at the following URL:
 //
 // https://www.javascripttutorial.net/javascript-apply-method/
@@ -67,3 +67,25 @@ console.log('Powering up Server...\n');
 console.log(result2, '\n');
 console.log('Powering down Server...\n');
 console.log(result3, '\n');
+
+// EXAMPLE 3: Using the apply() method to
+// append one array to another in place
+// without creating a new array.
+
+let someNumbers = [1, 2, 3];
+let moreNumbers = [4, 5, 6];
+
+console.log(`\nIII: Using apply() to Append One Array to Another:`);
+console.log('=================================================\n');
+console.log('someNumbers[] Array:');
+console.log('-------------------');
+console.log(someNumbers, '\n');
+console.log('moreNumbers[] Array:');
+console.log('-------------------');
+console.log(moreNumbers, '\n');
+
+// Join the two arrays using apply()
+someNumbers.push.apply(someNumbers, moreNumbers);
+
+console.log('Appending moreNumbers[] to someNumbers[]...\n');
+console.log(`someNumbers = [${someNumbers}]\n`);

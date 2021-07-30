@@ -1,4 +1,5 @@
 // Capture table cells and buttons
+
 const breedOne = document.getElementById('favBreed1');
 const breedOrigin1 = document.getElementById('origin1');
 const breedAvgLife1 = document.getElementById('avgLife1');
@@ -16,40 +17,49 @@ const button2 = document.getElementById('breed2');
 const button3 = document.getElementById('breed3');
 const button4 = document.getElementById('reset');
 
+// Dog objects:
 const breed1 = {
-  breed: 'PUG',
-  origin: 'CHINA',
-  lifeSpan: '12-15 YEARS'
+  breed: 'pug',
+  origin: 'china',
+  lifeSpan: '12-15 years'
 };
 
 const breed2 = {
-  breed: 'LABRADOR',
-  origin: 'NEWFOUNDLAND',
-  lifeSpan: '10-12 YEARS'
+  breed: 'labrador',
+  origin: 'newfoundland',
+  lifeSpan: '10-12 years'
 };
 
 const breed3 = {
-  breed: 'BEAGLE',
-  origin: 'ENGLAND',
-  lifeSpan: '12-15 YEARS'
+  breed: 'beagle',
+  origin: 'england',
+  lifeSpan: '12-15 years'
 };
 
+// Get info for each breed object:
 const getDogInfo = {
   info: function() {
-    // Array containing properties of each dog object
     return [
       this.breed,
       this.origin,
-      this.lifeSpan];
+      this.lifeSpan
+    ];
   }
 };
 
-const dog1 = getDogInfo.info.call(breed1);
-const dog2 = getDogInfo.info.call(breed2);
-const dog3 = getDogInfo.info.call(breed3);
+// Bound functions:
+const dog1 = getDogInfo.info.bind(breed1);
+const dog2 = getDogInfo.info.bind(breed2);
+const dog3 = getDogInfo.info.bind(breed3);
+
+// Dog Data Arrays
+const dogBreed1 = dog1();
+const dogBreed2 = dog2();
+const dogBreed3 = dog3();
+
+// Reset Table
 
 const resetTable = () => {
-  
   const noSelection = 'NO BREED SELECTED';
 
   breedOne.textContent = noSelection;
@@ -63,8 +73,9 @@ const resetTable = () => {
   breedThree.textContent = noSelection;
   breedOrigin3.textContent = null;
   breedAvgLife3.textContent = null;
-
 };
+
+// Set content for each breed row
 
 const setRowContent = (
   column1,
@@ -72,20 +83,18 @@ const setRowContent = (
   column3,
   breed
 ) => {
-  column1.textContent = breed[0];
-  column2.textContent = breed[1];
-  column3.textContent = breed[2];
+  column1.textContent = breed[0].toUpperCase();
+  column2.textContent = breed[1].toUpperCase();
+  column3.textContent = breed[2].toUpperCase();
 };
 
-// Button box event listeners populate
-// table with dog breed information.
-
+// Button Event Listeners:
 button1.addEventListener('click', () => {
   setRowContent(
     breedOne,
     breedOrigin1,
     breedAvgLife1,
-    dog1
+    dogBreed1
   );
 });
 
@@ -94,7 +103,7 @@ button2.addEventListener('click', () => {
     breedTwo,
     breedOrigin2,
     breedAvgLife2,
-    dog2
+    dogBreed2
   );
 });
 
@@ -103,7 +112,7 @@ button3.addEventListener('click', () => {
     breedThree,
     breedOrigin3,
     breedAvgLife3,
-    dog3
+    dogBreed3
   );
 });
 

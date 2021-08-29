@@ -85,13 +85,12 @@ const addFavoriteBreed = () => {
   const dogValues = getBreedValues();
   // Capture newRow child nodes
   const columns = newRow.children;
-  columns[0].textContent = dogValues[0];
-  columns[1].textContent = dogValues[1];
-  columns[2].textContent = dogValues[2];
+  columns[0].textContent = dogValues[0].toUpperCase();
+  columns[1].textContent = dogValues[1].toUpperCase();
+  columns[2].textContent = dogValues[2].toUpperCase();
 
   closeModal();
 };
-
 
 // This method of removing rows found on StackOverFlow,
 // Option 2B:

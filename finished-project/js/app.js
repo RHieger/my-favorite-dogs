@@ -23,6 +23,9 @@ const xButton = document.getElementById('xButton');
 const cancelButton = document.getElementById('cancel');
 const submitFavorite = document.getElementById('submitBreed');
 
+// Warning text for empty fields:
+const warning = document.createElement('p');
+
 const hideElement = (nodeName) => {
   nodeName.classList.replace('visible', 'invisible');
 };
@@ -80,6 +83,45 @@ const addFavoriteBreed = () => {
     placeHolder.remove();
   }
 
+  if (
+      modalBreed.value === '' ||
+      modalOrigin.value === '' ||
+      modalLifeSpan.value === ''
+     ) {
+      modalInputs.append(warning);
+      warning.textContent = 'All fields must be entered!';
+      warning.classList.add('warning');
+      modalDialogue.style.height = '600px';
+      modalBreed.style.borderColor = 'crimson';
+      modalOrigin.style.borderColor = 'crimson';
+      modalLifeSpan.style.borderColor = 'crimson';
+  } else {
+    modalBreed.style.borderColor = '#900c3f';
+    modalOrigin.style.borderColor = '#900c3f';
+    modalLifeSpan.style.borderColor = '#900c3f';
+    warning.remove();
+    modalDialogue.style.height = '515px';
+    const newRow = addTableRow();
+    dogTableBody.appendChild(newRow);
+    const dogValues = getBreedValues();
+
+    // Capture newRow child nodes and
+    const columns = newRow.children;
+    columns[0].textContent = dogValues[0].toUpperCase();
+    columns[1].textContent = dogValues[1].toUpperCase();
+    columns[2].textContent = dogValues[2].toUpperCase();
+
+    closeModal();
+  }
+
+};
+
+/*
+const addFavoriteBreed = () => {
+  if (placeHolder) {
+    placeHolder.remove();
+  }
+
   const newRow = addTableRow();
   dogTableBody.append(newRow);
   const dogValues = getBreedValues();
@@ -91,6 +133,7 @@ const addFavoriteBreed = () => {
 
   closeModal();
 };
+*/
 
 // This method of removing rows found on StackOverFlow,
 // Option 2B:
@@ -101,6 +144,12 @@ const removeTableRows = () => {
     dogTableBody.removeChild(dogTableBody.lastChild);
   }
 };
+
+// Data validation
+
+
+
+// Event Listeners
 
 addBreed.addEventListener('click', () => {
   showModal();

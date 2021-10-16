@@ -10,6 +10,8 @@
 // METHOD #1 Using charAt():
 
 const member = 'joNaThAN';
+const firstChar = member.charAt(0);
+const wordRemainder = member.slice(1);
 
 const capitalize = (word) => {
   const lowerCase = word.toLowerCase();
@@ -33,6 +35,10 @@ const capitalize4 = (word) => {
   loweredCase.slice(1);
 };
 
+const capitalize5 = ([first, ...rest]) => {
+  return first.toUpperCase() + rest.join('').toLowerCase();
+};
+
 console.log(`\nCapitalize Method #1:`);
 console.log(`--------------------`);
 console.log('capitalize = ' + capitalize.toString(), '\n');
@@ -43,7 +49,7 @@ console.log(`${member} capitalized is ${capitalize(member)}.\n`);
 console.log(`\nCapitalize Method #2:`);
 console.log(`--------------------`);
 console.log('capitalize2 = ' + capitalize2.toString(), '\n');
-console.log(`${member} capitalized is ${capitalize2(member)}.\n`);
+console.log(`${member} capitalized is ${capitalize2(wordRemainder)}.\n`);
 
 // METHOD #3 substring():
 
@@ -58,3 +64,10 @@ console.log(`\nCapitalize Method #4:`);
 console.log(`--------------------`);
 console.log('capitalize4 = ' + capitalize4.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize2(member)}.\n`);
+
+// METHOD #5 Using Rest Parameter
+
+console.log(`\nCapitalize Method #5:`);
+console.log(`--------------------`);
+console.log('capitalize5 = ' + capitalize5.toString(), '\n');
+console.log(`${member} capitalized is ${capitalize5([firstChar, ...member.slice(1)])}.\n`);

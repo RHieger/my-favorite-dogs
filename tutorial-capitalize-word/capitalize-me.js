@@ -48,42 +48,55 @@ const capitalize6 = (word) => {
     .join('');
 };
 
+const capitalize7 = (word) => {
+  return word
+    .toLowerCase()
+    .replace(/\w/, firstChar => firstChar.toUpperCase());
+};
+
 console.log(`\nCapitalize Method #1:`);
 console.log(`--------------------`);
-console.log('capitalize = ' + capitalize.toString(), '\n');
+console.log('const capitalize = ' + capitalize.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize(member)}.\n`);
 
 // METHOD #2 Using Bracket Notation:
 
 console.log(`\nCapitalize Method #2:`);
 console.log(`--------------------`);
-console.log('capitalize2 = ' + capitalize2.toString(), '\n');
+console.log('const capitalize2 = ' + capitalize2.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize2(wordRemainder)}.\n`);
 
 // METHOD #3 substring():
 
 console.log(`\nCapitalize Method #3:`);
 console.log(`--------------------`);
-console.log('capitalize3 = ' + capitalize3.toString(), '\n');
+console.log('const capitalize3 = ' + capitalize3.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize2(member)}.\n`);
 
 // METHOD #4 Using 2 steps
 
 console.log(`\nCapitalize Method #4:`);
 console.log(`--------------------`);
-console.log('capitalize4 = ' + capitalize4.toString(), '\n');
+console.log('const capitalize4 = ' + capitalize4.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize2(member)}.\n`);
 
 // METHOD #5 Using Rest Parameter
 
 console.log(`\nCapitalize Method #5:`);
 console.log(`--------------------`);
-console.log('capitalize5 = ' + capitalize5.toString(), '\n');
+console.log('const capitalize5 = ' + capitalize5.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize5([firstChar, ...member.slice(1)])}.\n`);
 
 // METHOD #6 Using map()
 
 console.log(`\nCapitalize Method #6:`);
 console.log(`--------------------`);
-console.log('capitalize6 = ' + capitalize6.toString(), '\n');
+console.log('const capitalize6 = ' + capitalize6.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize6(member)}.\n`);
+
+// METHOD #7 Using Regex
+
+console.log(`\nCapitalize Method #7:`);
+console.log(`--------------------`);
+console.log('const capitalize7 = ' + capitalize7.toString(), '\n');
+console.log(`${member} capitalized is ${capitalize7(member)}.\n`);

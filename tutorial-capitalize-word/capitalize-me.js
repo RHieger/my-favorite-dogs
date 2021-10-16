@@ -39,6 +39,15 @@ const capitalize5 = ([first, ...rest]) => {
   return first.toUpperCase() + rest.join('').toLowerCase();
 };
 
+const capitalize6 = (word) => {
+  return word
+    .split('')
+    .map((letter, index) =>
+      index ? letter.toLowerCase() : letter.toUpperCase(),
+    )
+    .join('');
+};
+
 console.log(`\nCapitalize Method #1:`);
 console.log(`--------------------`);
 console.log('capitalize = ' + capitalize.toString(), '\n');
@@ -71,3 +80,10 @@ console.log(`\nCapitalize Method #5:`);
 console.log(`--------------------`);
 console.log('capitalize5 = ' + capitalize5.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize5([firstChar, ...member.slice(1)])}.\n`);
+
+// METHOD #6 Using map()
+
+console.log(`\nCapitalize Method #6:`);
+console.log(`--------------------`);
+console.log('capitalize6 = ' + capitalize6.toString(), '\n');
+console.log(`${member} capitalized is ${capitalize6(member)}.\n`);

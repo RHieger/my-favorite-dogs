@@ -27,6 +27,12 @@ const capitalize3 = (word) => {
   word.substring(1).toLowerCase();
 };
 
+const capitalize4 = (word) => {
+  const loweredCase = word.toLowerCase();
+  return word[0].toUpperCase() +
+  loweredCase.slice(1);
+};
+
 console.log(`\nCapitalize Method #1:`);
 console.log(`--------------------`);
 console.log('capitalize = ' + capitalize.toString(), '\n');
@@ -44,4 +50,11 @@ console.log(`${member} capitalized is ${capitalize2(member)}.\n`);
 console.log(`\nCapitalize Method #3:`);
 console.log(`--------------------`);
 console.log('capitalize3 = ' + capitalize3.toString(), '\n');
+console.log(`${member} capitalized is ${capitalize2(member)}.\n`);
+
+// METHOD #4 Using 2 steps
+
+console.log(`\nCapitalize Method #4:`);
+console.log(`--------------------`);
+console.log('capitalize4 = ' + capitalize4.toString(), '\n');
 console.log(`${member} capitalized is ${capitalize2(member)}.\n`);

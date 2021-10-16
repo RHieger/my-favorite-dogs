@@ -92,29 +92,41 @@ const addFavoriteBreed = () => {
       warning.textContent = 'All fields must be entered!';
       warning.classList.add('warning');
       modalDialogue.style.height = '600px';
-      modalBreed.style.borderColor = 'crimson';
-      modalOrigin.style.borderColor = 'crimson';
-      modalLifeSpan.style.borderColor = 'crimson';
-  } else {
-    modalBreed.style.borderColor = '#900c3f';
-    modalOrigin.style.borderColor = '#900c3f';
-    modalLifeSpan.style.borderColor = '#900c3f';
-    warning.remove();
-    modalDialogue.style.height = '515px';
-    const newRow = addTableRow();
-    dogTableBody.appendChild(newRow);
-    const dogValues = getBreedValues();
+      if (modalBreed.value === '') {
+        modalBreed.style.borderColor = 'crimson';
+        modalBreed.style.background = 'LightSalmon';
+      }
+      if (modalOrigin.value === '') {
+        modalOrigin.style.borderColor = 'crimson';
+        modalOrigin.style.background = 'LightSalmon';
+      }
+      if (modalLifeSpan.value === '') {
+        modalLifeSpan.style.borderColor = 'crimson';
+        modalLifeSpan.style.background = 'LightSalmon';
+      }
+    } else {
+      modalBreed.style.borderColor = '#900c3f';
+      modalBreed.style.background = 'white';
+      modalOrigin.style.borderColor = '#900c3f';
+      modalOrigin.style.background = 'white'
+      modalLifeSpan.style.borderColor = '#900c3f';
+      modalLifeSpan.style.background = 'white';
+      warning.remove();
+      modalDialogue.style.height = '515px';
+      const newRow = addTableRow();
+      dogTableBody.appendChild(newRow);
+      const dogValues = getBreedValues();
 
-    // Capture newRow child nodes and
-    const columns = newRow.children;
-    columns[0].textContent = dogValues[0].toUpperCase();
-    columns[1].textContent = dogValues[1].toUpperCase();
-    columns[2].textContent = dogValues[2].toUpperCase();
+      // Capture newRow child nodes and
+      const columns = newRow.children;
+      columns[0].textContent = dogValues[0].toUpperCase();
+      columns[1].textContent = dogValues[1].toUpperCase();
+      columns[2].textContent = dogValues[2].toUpperCase();
 
-    closeModal();
-  }
+      closeModal();
+    }
 
-};
+  };
 
 /*
 const addFavoriteBreed = () => {
